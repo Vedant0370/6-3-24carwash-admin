@@ -36,6 +36,8 @@ const Login = () => {
   }
 
   return (
+    <>
+    <h1 className='heading-admin'>Welcome To Admin Dashboard</h1>
     <div className="login-container">
       <form className="login-form" onSubmit={handleLogin}>
         <h2>Login</h2>
@@ -62,6 +64,7 @@ const Login = () => {
         <button type="submit">Login</button>
       </form>
     </div>
+    </>
   );
 }
 
