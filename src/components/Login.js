@@ -9,7 +9,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:8000/api/adminlogin', {
+      const response = await fetch('https://car-wash-backend-api.onrender.com/api/adminlogin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
