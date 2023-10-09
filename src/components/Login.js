@@ -1,39 +1,25 @@
 import React, { useState } from 'react';
 import './Login.css';
-
+import axios from 'axios';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch('https://car-wash-backend-api.onrender.com/api/adminlogin', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      if (response.ok) {
-        // Successful login
-        window.location.href = 'https://car-wash-admin-site.onrender.com';
-      } else {
-        // Handle unsuccessful login
-        const errorData = await response.json();
-
-        if (errorData.message) {
-          alert(`Error: ${errorData.message}`);
-        } else {
-          alert('Invalid credentials. Please try again.');
-        }
-      }
-    } catch (error) {
-      console.error('Error:', error);
+  
+    const emailToCheck = 'test@gmail.com'; // Email from the available data
+    const passwordToCheck = 'test1234';   // Password from the available data
+  
+    if (email === emailToCheck && password === passwordToCheck) {
+      // Successful login, navigate to the admin site
+      window.location.href = 'https://car-wash-admin-site.onrender.com';
+    } else {
+      // Show an alert for incorrect email or password
+      alert('Incorrect email or password. Please try again.');
     }
   }
+  
 
   return (
     <>
