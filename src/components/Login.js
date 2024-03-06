@@ -13,7 +13,7 @@ const Login = () => {
   
     if (email === emailToCheck && password === passwordToCheck) {
       // Successful login, navigate to the admin site
-      window.location.href = 'https://car-wash-admin-three.vercel.app';
+      window.location.href = 'https://eastwayvisa.com';
     } else {
       // Show an alert for incorrect email or password
       alert('Incorrect email or password. Please try again.');
